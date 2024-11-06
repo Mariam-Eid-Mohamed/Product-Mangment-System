@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el3agayby Store</title>
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+    <div class="formcontainer bg-secondary py-5 min-vh-100">
+        <div class="container">
+            <h1 class="py-4 text-center text-black">Form Data</h1>
+            <div class="content">
+                <label for="productname">Product Name</label>
+                <input type="text" placeholder="Name" id="productname" class="form-control mb-3"oninput="regexall(regname, ProductName);">
+                <label for="productprice">Product Price</label>
+                <input type="text" placeholder="Price" id="productprice"class="form-control  mb-3" oninput="regexall(regprice, ProductPrice);">
+                <label for="productdesc">Product Description</label>
+                <input type="text" placeholder="description" id="productdesc"class="form-control  mb-3"oninput="regexall(regdesc, ProductDesc);">
+                <label for="productcat">Product Category</label>
+                <input type="text" placeholder="Category" id="productcat"class="form-control  mb-3"oninput="regexall(regcat, ProductCat);">
+                <button class="btn btn-warning"id="addandupdatebtn" onclick="ActionButton()">Add Product</button>
+               
+            </div>
+            <div class="serachInput mt-4 py-4">
+                <input type="text" placeholder="search here..."class="form-control w-75 mx-auto" oninput="SearchByName(this.value);">
+            </div>
+            <div class="tableform py-4">
+                <table class=" table table-striped text-center">
+                    <thead>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody id="tableBody">
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+<script src="../Javascript/script.js"></script>
+</body>
+</html>
